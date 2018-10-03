@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from adoption.config.development import DevelopmentConfig
 
 db = SQLAlchemy()
+from .models import *
 
 
 def create_app():
