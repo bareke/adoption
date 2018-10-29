@@ -7,9 +7,9 @@ db = SQLAlchemy()
 from .models import *
 
 
-def create_app():
+def create_app(config=DevelopmentConfig):
     app = Flask(__name__)
-    app.config.from_object(DevelopmentConfig)
+    app.config.from_object(config)
 
     # Init database
     with app.app_context():
